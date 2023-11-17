@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.jsoup:jsoup:1.15.3'
+    implementation 'net.sf.saxon:Saxon-HE:12.3'
+    implementation 'org.jetbrains:annotations:24.1.0'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs 'src'
+        }
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.release = 17
+}
