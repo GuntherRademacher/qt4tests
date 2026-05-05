@@ -11,7 +11,7 @@
           covers-40="PR197">
    <description>Tests for keyword argument names to built-in functions</description>
    <dependency type="spec" value="XP40+ XQ40+"/>
-   <!--Generated using generate-keyword-test-set.xsl from function-catalog.xml at 2026-05-05T16:16:49.821462463Z-->
+   <!--Generated using generate-keyword-test-set.xsl from function-catalog.xml at 2026-05-05T16:17:40.845579621Z-->
    <environment name="ka">
       <namespace prefix="math" uri="http://www.w3.org/2005/xpath-functions/math"/>
       <namespace prefix="output" uri="http://www.w3.org/2010/xslt-xquery-serialization"/>
@@ -85,7 +85,7 @@
       <description>Test of keyword arguments in fn:error</description>
       <created by="generate-keyword-test-set.xsl" on="2026-05-05"/>
       <environment ref="ka"/>
-      <test>fn:error(code := ?, description := ?, value := ?) instance of function(xs:QName?, xs:string?, item()*) as xs:error</test>
+      <test>fn:error(code := ?, description := ?, value := ?) instance of function(xs:QName?, xs:string?, item()*) as item()*</test>
       <result>
          <assert-true/>
       </result>
