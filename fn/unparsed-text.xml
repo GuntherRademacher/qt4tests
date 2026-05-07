@@ -1043,28 +1043,31 @@
    <test-case name="fn-unparsed-text-bom-013" covers-40="PR2249">
       <description>File input: BOM, different encodings</description>
       <created by="Christian Gruen" on="2025-10-27"/>
+      <modified by="Sheila Thomson" on="2026-05-05" change="Changed expected error from FOUT1200 to FOUT1190 as an encoding is specified."/>
       <dependency type="spec" value="XP40+ XQ40+"/>
       <test>unparsed-text('parse-csv/bom-utf8.csv', 'utf-16')</test>
       <result>
-         <error code="FOUT1200"/>
+         <error code="FOUT1190"/>
       </result>
    </test-case>
    <test-case name="fn-unparsed-text-bom-014" covers-40="PR2249">
       <description>File input: BOM, different encodings</description>
       <created by="Christian Gruen" on="2025-10-27"/>
+      <modified by="Sheila Thomson" on="2026-05-05" change="Changed expected error from FOUT1200 to FOUT1190 as an encoding is specified."/>
       <dependency type="spec" value="XP40+ XQ40+"/>
       <test>unparsed-text('parse-csv/bom-utf8.csv', 'utf-16be')</test>
       <result>
-         <error code="FOUT1200"/>
+      	<error code="FOUT1190"/>
       </result>
    </test-case>
    <test-case name="fn-unparsed-text-bom-015" covers-40="PR2249">
       <description>File input: BOM, different encodings</description>
       <created by="Christian Gruen" on="2025-10-27"/>
+      <modified by="Sheila Thomson" on="2026-05-05" change="Changed expected error from FOUT1200 to FOUT1190 as an encoding is specified."/>
       <dependency type="spec" value="XP40+ XQ40+"/>
       <test>unparsed-text('parse-csv/bom-utf8.csv', 'utf-16le')</test>
       <result>
-         <error code="FOUT1200"/>
+      	<error code="FOUT1190"/>
       </result>
    </test-case>
    <test-case name="fn-unparsed-text-bom-016" covers-40="PR2249">
@@ -1092,10 +1095,11 @@
    <test-case name="fn-unparsed-text-bom-022" covers-40="PR2249">
       <description>File input: BOM, different encodings</description>
       <created by="Christian Gruen" on="2025-10-27"/>
+      <modified by="Sheila Thomson" on="2026-05-05" change="Changed expected error from FOUT1200 to FOUT1190 as an encoding is specified."/>
       <dependency type="spec" value="XP40+ XQ40+"/>
       <test>unparsed-text('parse-csv/bom-utf16le.csv', 'utf-8')</test>
       <result>
-         <error code="FOUT1200"/>
+         <error code="FOUT1190"/>
       </result>
    </test-case>
    <test-case name="fn-unparsed-text-bom-023" covers-40="PR2249">
@@ -1150,10 +1154,11 @@
    <test-case name="fn-unparsed-text-bom-032" covers-40="PR2249">
       <description>File input: BOM, different encodings</description>
       <created by="Christian Gruen" on="2025-10-27"/>
+      <modified by="Sheila Thomson" on="2026-05-05" change="Changed expected error from FOUT1200 to FOUT1190 as an encoding is specified."/>
       <dependency type="spec" value="XP40+ XQ40+"/>
       <test>unparsed-text('parse-csv/bom-utf16be.csv', 'utf-8')</test>
       <result>
-         <error code="FOUT1200"/>
+         <error code="FOUT1190"/>
       </result>
    </test-case>
    <test-case name="fn-unparsed-text-bom-033" covers-40="PR2249">
@@ -1208,10 +1213,11 @@
    <test-case name="fn-unparsed-text-bom-042" covers-40="PR2249">
       <description>File input: invalid BOM, different encodings</description>
       <created by="Christian Gruen" on="2025-10-27"/>
+      <modified by="Sheila Thomson" on="2026-05-05" change="Changed expected error from FOUT1200 to FOUT1190 as an encoding is specified."/>
       <dependency type="spec" value="XP40+ XQ40+"/>
       <test>unparsed-text('parse-csv/bom-invalid.csv', 'utf-8')</test>
       <result>
-         <error code="FOUT1200"/>
+         <error code="FOUT1190"/>
       </result>
    </test-case>
    <test-case name="fn-unparsed-text-bom-043" covers-40="PR2249">
