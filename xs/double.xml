@@ -69,6 +69,32 @@
       </result>
    </test-case>
   
+  <test-case name="xs-double-006">
+      <description>Cast double to integer: negative values</description>
+      <created by="Michael Kay" on="2026-05-01"/>
+      <test>("-3.4028235E38", -123e20, -1.234e16, -99999999.9999e0, -456e0, -0.001e0, -1e-10, -1e-20, -0) ! xs:double(.) ! xs:integer(.)</test>
+      <result>
+        <any-of>
+          <assert-deep-eq>(-340282349999999991754788743781432688640, -12300000000000001048576, 
+            -12340000000000000, -99999999, -456, 0, 0, 0, 0)</assert-deep-eq>
+          <error code="FOCA0003"/>
+        </any-of>
+      </result>
+   </test-case>
+   
+   <test-case name="xs-double-007">
+      <description>Cast double to integer: positive values</description>
+      <created by="Michael Kay" on="2026-05-01"/>
+      <test>("3.4028235E38", 123e20, 1.234e16, 99999999.9999e0, 456e0, 0.001e0, 1e-10, 1e-20, 0) ! xs:double(.) ! xs:integer(.)</test>
+      <result>
+        <any-of>
+          <assert-deep-eq>(340282349999999991754788743781432688640, 12300000000000001048576, 
+            12340000000000000, 99999999, 456, 0, 0, 0, 0)</assert-deep-eq>
+          <error code="FOCA0003"/>
+        </any-of>
+      </result>
+   </test-case>
+  
   <test-case name="xs-double-401" covers-40="PR662">
     <description>Zero argument constructor</description>
     <created by="Michael Kay" on="2023-12-08"/>   

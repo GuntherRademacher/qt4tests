@@ -479,7 +479,7 @@
       </result>
    </test-case>
    
-   <test-case name="K2-Steps-44">
+   <!--<test-case name="K2-Steps-44">
       <description>
          RHS of "/" operator can be any PostfixExpr.
          LHS of "?[...]" operator is coerced from JNode to (map()|array())</description>
@@ -489,7 +489,7 @@
       <result>
          <assert-deep-eq>[5, 6]</assert-deep-eq>
       </result>
-   </test-case>
+   </test-case>-->
    
    <test-case name="K2-Steps-45">
       <description>

@@ -56,6 +56,34 @@
       </result>
    </test-case>
    
+   <test-case name="xs-float-005">
+      <description>Cast float to integer: negative values</description>
+      <created by="Michael Kay" on="2026-05-01"/>
+      <test>("-3.4028235E38", -123e20, -1.234e16, -99999999.9999e0, -456e0, -0.001e0, -1e-10, -1e-20, -0) ! xs:float(.) ! xs:integer(.)</test>
+      <result>
+        <any-of>
+           <assert-deep-eq>(-340282346638528859811704183484516925440, -12300000492793395937280, 
+               -12340000460898304, -100000000, -456, 0, 0, 0, 0)</assert-deep-eq>
+           <error code="FOCA0003"/>
+        </any-of>
+      </result>
+   </test-case>
+   
+   <test-case name="xs-float-006">
+      <description>Cast float to integer: positive values (Saxon bug 7070)</description>
+      <created by="Michael Kay" on="2026-05-01"/>
+      <test>("3.4028235E38", 123e20, 1.234e16, 99999999.9999e0, 456e0, 0.001e0, 1e-10, 1e-20, 0) ! xs:float(.) ! xs:integer(.)</test>
+      <result>
+        <any-of>
+           <assert-deep-eq>(340282346638528859811704183484516925440, 12300000492793395937280, 
+               12340000460898304, 100000000, 456, 0, 0, 0, 0)</assert-deep-eq>
+           <error code="FOCA0003"/>
+        </any-of>
+      </result>
+   </test-case>
+   
+   
+   
    
    <test-case name="cbcl-float-001">
       <description/>
