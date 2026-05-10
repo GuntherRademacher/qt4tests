@@ -223,7 +223,8 @@
    <test-case name="JSONiq-1.1.3">
       <description>Transformation</description>
       <created by="Michael Kay" on="2025-08-13"/>
-      <dependency type="spec" value="XQ40+ XP40+"/>      
+      <modified by="Michael Kay" on="2026-05-10" change="Filter syntax ?[...] has been dropped"/>
+      <dependency type="spec" value="XQ40+"/>      
       <test>
          let $satellites :=
          {
@@ -263,10 +264,14 @@
       let $sats := $satellites ? satellites
       return {
         "visible" : array {
-           map:keys($sats?[?value?visible])
+           for key $k value $v in $sats
+           where $v?visible
+           return $k
         },
         "invisible" : array {
-           map:keys($sats?[not(?value?visible)])
+           for key $k value $v in $sats
+           where not($v?visible)
+           return $k
         }
       }
       
