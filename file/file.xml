@@ -2934,6 +2934,7 @@
     <created by="Michael Kay" on="2012-06-11"/>
     <modified by="John Lumley" on="2014-08-11" change="consistent EXPath naming"/>
     <modified by="Christian Gruen" on="2026-02-09" change="may yield an error"/>
+    <modified by="Sheila Thomson" on="2026-05-12" change="added not-found error as it is up to the implementation whether to return the invalid-path error instead."/>
     <environment ref="EXPath-file"/>
     <test>
          file:path-to-native("//test.txt")
@@ -2941,6 +2942,7 @@
     <result>
       <any-of>
         <error code="Q{http://expath.org/ns/file}invalid-path"/>
+        <error code="Q{http://expath.org/ns/file}not-found"/>
         <assert>ends-with($result, "test.txt")</assert>
         <assert>ends-with($result, "sandpit\test.txt")</assert>
       </any-of>
