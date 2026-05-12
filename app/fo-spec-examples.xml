@@ -20897,6 +20897,30 @@ return $result
       <created by="Michael Kay using generate-qt3-test-set.xsl" on="2026-05-12"/>
       <environment ref="global"/>
       <test>
+        jtree({"a":1, "b":2})/b/preceding-sibling::*/jkey()
+      </test>
+      <result>
+         <assert-deep-eq>"a"</assert-deep-eq>
+      </result>
+   </test-case>
+
+   <test-case name="fo-test-fn-jtree-002">
+      <description>Test case for fn:jtree</description>
+      <created by="Michael Kay using generate-qt3-test-set.xsl" on="2026-05-12"/>
+      <environment ref="global"/>
+      <test>
+        jtree({"a":1, "b":2})/b/preceding-sibling::*/jvalue()
+      </test>
+      <result>
+         <assert-deep-eq>1</assert-deep-eq>
+      </result>
+   </test-case>
+
+   <test-case name="fo-test-fn-jtree-003">
+      <description>Test case for fn:jtree</description>
+      <created by="Michael Kay using generate-qt3-test-set.xsl" on="2026-05-12"/>
+      <environment ref="global"/>
+      <test>
         jtree([ "a", "b", "c" ])/*[1]/../*[last()] =&gt; string()
       </test>
       <result>
@@ -20904,7 +20928,7 @@ return $result
       </result>
    </test-case>
 
-   <test-case name="fo-test-fn-jtree-002">
+   <test-case name="fo-test-fn-jtree-004">
       <description>Test case for fn:jtree</description>
       <created by="Michael Kay using generate-qt3-test-set.xsl" on="2026-05-12"/>
       <environment ref="global"/>
@@ -20916,7 +20940,7 @@ return $result
       </result>
    </test-case>
 
-   <test-case name="fo-test-fn-jtree-003">
+   <test-case name="fo-test-fn-jtree-005">
       <description>Test case for fn:jtree</description>
       <created by="Michael Kay using generate-qt3-test-set.xsl" on="2026-05-12"/>
       <environment ref="global"/>
